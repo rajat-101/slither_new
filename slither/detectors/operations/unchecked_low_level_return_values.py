@@ -19,7 +19,7 @@ class UncheckedLowLevel(UnusedReturnValues):
     WIKI = "https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-low-level-calls"
 
     WIKI_TITLE = "Unchecked low-level calls"
-    WIKI_DESCRIPTION = "The return value of a low-level call is not checked."
+    WIKI_DESCRIPTION = "The return value of a low-level call is not checked. The use of low level 'call' should be avoided whenever possible. It can lead to unexpected behavior if return values are not handled properly."
 
     # region wiki_exploit_scenario
     WIKI_EXPLOIT_SCENARIO = """
