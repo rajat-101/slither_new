@@ -95,8 +95,7 @@ Do not report reentrancies that involve Ether (see `reentrancy-eth`)."""
             calls = sorted(list(set(calls)), key=lambda x: x[0].node_id)
             varsWritten = sorted(varsWritten, key=lambda x: (x.variable.name, x.node.node_id))
 
-            info = ["Reentrancy in ", func, ":\n"]
-            info = ["Reentrancy occurs when external contract calls are allowed to make new calls to the calling contract before the initial execution is complete.\n"]
+            info = ["Reentrancy in ", func, ":\nReentrancy occurs when external contract calls are allowed to make new calls to the calling contract before the initial execution is complete."]
             info += ["\tExternal calls:\n"]
             for (call_info, calls_list) in calls:
                 info += ["\t- ", call_info, "\n"]
