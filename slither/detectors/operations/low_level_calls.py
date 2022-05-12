@@ -52,7 +52,7 @@ class LowLevelCalls(AbstractDetector):
                 nodes.sort(key=lambda x: x.node_id)
 
                 for node in nodes:
-                    info += ["\t- ", node, "\n"]
+                    info += ["\t- ", node, "\n Low level functionscall(), callcode(), delegatecall() and send() can return false. We must verify the return value before assume that it was executed successfully"]
 
                 res = self.generate_result(info)
 
