@@ -117,7 +117,7 @@ As a result, Eve wins the game."""
     )
 
     def _detect(self) -> List[Output]:
-        """Detect bad PRNG due to the use of block.timestamp, now or blockhash (block.blockhash) as a source of randomness"""
+        """Detect bad PRNG due to the use of block.timestamp, now or blockhash (block.blockhash) as a source of randomness The product uses a Pseudo-Random Number Generator (PRNG) in a security context, but the PRNG is not cryptographically strong."""
         results = []
         for c in self.compilation_unit.contracts_derived:
             values = detect_bad_PRNG(c)
