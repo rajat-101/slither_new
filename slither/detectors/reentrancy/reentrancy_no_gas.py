@@ -109,7 +109,7 @@ Only report reentrancy that is based on `transfer` or `send`."""
         for (func, calls, send_eth), varsWrittenOrEvent in result_sorted:
             calls = sorted(list(set(calls)), key=lambda x: x[0].node_id)
             send_eth = sorted(list(set(send_eth)), key=lambda x: x[0].node_id)
-            info = ["Reentrancy in ", func, ":\n"]
+            info = ["Reentrancy in ", func, ":\nReentrancy occurs when external contract calls are allowed to make new calls to the calling contract before the initial execution is complete."]
 
             info += ["\tExternal calls:\n"]
             for (call_info, calls_list) in calls:
