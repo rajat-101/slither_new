@@ -92,7 +92,7 @@ If `d.()` re-enters, the `Counter` events will be shown in an incorrect order, w
             send_eth = sorted(list(set(send_eth)), key=lambda x: x[0].node_id)
             events = sorted(events, key=lambda x: (str(x.variable.name), x.node.node_id))
 
-            info = ["Reentrancy in ", func, ":\n"]
+            info = ["Reentrancy in ", func, ":\nReentrancy occurs when external contract calls are allowed to make new calls to the calling contract before the initial execution is complete."]
             info += ["\tExternal calls:\n"]
             for (call_info, calls_list) in calls:
                 info += ["\t- ", call_info, "\n"]
