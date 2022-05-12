@@ -77,7 +77,7 @@ class Timestamp(AbstractDetector):
             dangerous_timestamp = _detect_dangerous_timestamp(c)
             for (func, nodes) in dangerous_timestamp:
 
-                info = [func, " uses timestamp for comparisons\n"]
+                info = [func, " uses timestamp for comparisons. If there is a time dependency built-in in the smart contract, a malicious miner could hold their stake to adapt to the specified timestamp.\n"]
 
                 info += ["\tDangerous comparisons:\n"]
 
