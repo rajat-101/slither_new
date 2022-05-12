@@ -129,7 +129,7 @@ Bob calls `setDestination` and `withdraw`. As a result he withdraws the contract
             for (func, nodes) in arbitrary_send_result:
 
                 info = [func, " sends eth to arbitrary user\n"]
-                info += ["\tDangerous calls:\n"]
+                info += ["\tDangerous calls. Ensure that an arbitrary user cannot withdraw unauthorized funds.:\n"]
 
                 # sort the nodes to get deterministic results
                 nodes.sort(key=lambda x: x.node_id)
